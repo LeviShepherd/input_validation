@@ -19,3 +19,20 @@ def average(score1, score2, score3):
         raise ValueError("Negative numbers are not allowed.")
     else:
         return float((score1 + score2 + score3) / NUMBER_TESTS)
+
+
+if __name__ == '__main__':
+
+    # Welcome message to user
+    print("Welcome to the average program, I'll average three scores!")
+
+    try:
+        # Prompt user for input of three scores
+        score1 = int(input("Enter your first score: "))
+        score2 = int(input("Enter your second score: "))
+        score3 = int(input("Enter your third score: "))
+    except ValueError:
+        print("Negative numbers are not allowed.")
+    else:
+        # Output the average to the user
+        print("Your Average score was: %6.2f" % average(score1, score2, score3))
