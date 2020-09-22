@@ -10,6 +10,8 @@ class MyTestCase(unittest.TestCase):
             average(-90, 89, 78)
         with self.assertRaises(ValueError):
             average(90, -89, 78)
+        with self.assertRaises(ValueError):
+            average(90, 89, -78)
 
 
 if __name__ == '__main__':
